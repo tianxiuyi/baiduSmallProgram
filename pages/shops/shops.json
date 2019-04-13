@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "paging": "/components/paging/paging",
+        "register": "/components/register/register"
+    }
+}

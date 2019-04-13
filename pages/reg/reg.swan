@@ -1,0 +1,33 @@
+<view class="titl"><text>10秒建站，生意不受地域限制，客户随时找上门！</text></view>
+<view class="regList">
+    <view class="regListCon">
+        <icon class="loginIco0"></icon>
+        <view class="LoginRight"><input type="text" value="{{companyName}}" placeholder="请输入您的公司名称" maxlength="25" bindinput="bindinputName" /></view>
+   </view>
+    <view class="regListCon">
+        <icon class="loginIco1"></icon>
+        <view class="LoginRight"><input type="number" value="{{number}}" placeholder="请输入您的手机号" maxlength="11" bindinput="bindinputNumber" /></view>
+   </view>
+    <view class="regListCon">
+        <icon class="loginIco2"></icon>
+        <view class="LoginRight"><input type="text" value="{{graphicalVerification}}" placeholder="请输入图形验证码" maxlength="4" bindinput="bindinputGraphicalVerification" /></view>
+        <view class="codeBox">
+            <image src="{{graphicalVerificationAddress}}"></image>
+            <button type="button" bindtap="graphicalVerification""></button>
+        </view>
+   </view>
+    <view class="regListCon">
+        <icon class="loginIco3"></icon>
+        <view class="LoginRight"><input type="text" value="{{verification}}" placeholder="请输入验证码" maxlength="6" bindinput="bindinputVerification" /></view>
+        <button type="button" class="hCode" bindtap="shortMessageVerification">{{countDown}}</button>
+   </view>
+    <view class="regListCon paddword">
+        <icon class="loginIco4"></icon>
+        <view class="LoginRight"><input type="text" password="{{!encryptions}}" value="{{password}}" placeholder="请输入密码" maxlength="20" bindinput="bindinputPassword" /></view>
+         <button type="button" class="passIco1" s-if="encryptions" bindtap="encryption" data-index="1"></button>
+         <button type="button" class="passIco2" s-else bindtap="encryption" data-index="2"></button>
+   </view>
+</view>
+<view class="regBtnBox">
+    <button type="submit" bindtap="register"">注册</button>
+</view>

@@ -1,0 +1,23 @@
+.titl{padding:20rpx 0;background-color: #fff;border-bottom:0.01rpx solid #e0e0e0;}
+.titl text{ display:block;font-size:30rpx;height:50rpx;line-height:50rpx;padding-left:30rpx;border-left:10rpx solid #fd5555;}
+.regList{overflow: hidden; background: #fff; padding:0 30rpx;}
+.regListCon{overflow: hidden;height:90rpx; border-bottom: 1rpx solid #e0e0e0; font-size:30rpx; line-height:90rpx; position: relative;}
+.regListCon input{color: #333; font-size: 30rpx;height:90rpx; line-height: 90rpx; border: 0; padding:0; margin: 0; padding-left: 70rpx;}
+.regListCon icon{display: block;height:50rpx;width:50rpx; position: absolute;top:20rpx;left:5rpx;}
+.regListCon icon.loginIco0{background:url(https://styles.hc360.com/images/M-hc/regTop/tIcon.png) 0 -554rpx no-repeat;background-size:500rpx 1000rpx;}
+.regListCon icon.loginIco1{background:url(http://style.org.hc360.com/images/M-hc/login/lrIco.png) 0 5rpx no-repeat;background-size:290rpx 236rpx;}
+.regListCon icon.loginIco2{background:url(http://style.org.hc360.com/images/M-hc/login/lrIco.png) 0 -126rpx no-repeat;background-size:290rpx 236rpx;}
+.regListCon icon.loginIco3{background:url(http://style.org.hc360.com/images/M-hc/login/lrIco.png) -158rpx -73rpx no-repeat;background-size:290rpx 236rpx;}
+.regListCon icon.loginIco4{background:url(http://style.org.hc360.com/images/M-hc/login/lrIco.png) 0 -61rpx no-repeat;background-size:290rpx 236rpx;left:40rpx;}
+.regListCon:nth-child(4){border-bottom:0;}
+.regListCon.paddword{ border-top:20rpx solid #f5f5f5; border-bottom:0; margin:0 -30rpx; padding:0 30rpx;}
+.codeBox{height:50rpx;top:14rpx;width:300rpx; position:absolute;right:0;}
+.codeBox image{height:60rpx;width:180rpx; float: left;}
+.codeBox button{ display: block; float: left;height:60rpx;width:60rpx;margin-left:20rpx; background:url(http://style.org.hc360.com/images/M-hc/login/lrIco.png) no-repeat -68rpx 12rpx;background-size:290rpx 236rpx;}
+.regListCon button.hCode{color:#fff;font-size:30rpx;height:60rpx;line-height:60rpx;width:250rpx;right:50rpx;border:none;background: #fd5555;position:absolute;top:14rpx;white-space:nowrap; border-radius:0;}
+button::after{border: 0;}
+button.passIco1,button.passIco2{ position: absolute;right:50rpx;width:60rpx;height:60rpx;top:14rpx;background:url(http://style.org.hc360.com/images/M-hc/login/lrIco.png) no-repeat -84rpx -174rpx;background-size:290rpx 236rpx}
+button.passIco1{ background-position:-84rpx -174rpx;}
+button.passIco2{ background-position:-157rpx -174rpx;}
+.regBtnBox{padding:30rpx;}
+.regBtnBox button{width:100%;display:block;height:80rpx;border:none;font-size:32rpx;color:#fff;font-family:'Microsoft YaHei';background:#fd5555;border-radius:6rpx; line-height: 80rpx;}

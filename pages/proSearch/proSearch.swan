@@ -1,0 +1,49 @@
+<view>
+    <view class="view">
+        <view class="searchBox2">
+            <view class="searchCon">
+                <view class="searchLeft">
+                    <icon class="serachIco"></icon>
+                    <input type="text" placeholder="请输入关键词搜索" value="{{text}}" bindinput="bindinputInput"/>
+                    <icon class="closeIco" bindtap="bindtapDifference"></icon>
+                </view>
+                <button type="button" bindtap="bindtapSearch">搜索</button>
+            </view>
+        </view>
+        <!--筛选项-->
+        <view class="tabTit">
+            <view class="{{currentTab == 0 && 'tabCur'}}" bindtap="bindtapTap" data-index="0">商品</view>
+            <view class="{{currentTab == 1 && 'tabCur'}}" bindtap="bindtapTap" data-index="1">商铺</view>
+            <view class="{{currentTab == 2 && 'tabCur'}}" bindtap="bindtapTap" data-index="2">资讯</view>
+        </view>
+    </view>
+    <swiper style="height:{{windowHeight}}px" duration="500" current="{{currentTab}}" bindchange="changeContent">
+        <swiper-item>
+            <scroll-view scroll-y scroll-top="{{top}}" style="height:{{windowHeight}}px" bindscroll="bindscrollRoll">
+                <view class="prpSearchTit">
+                    <view class="{{sort?'':'cur'}}" bindtap="bindtapComprehensive">综合</view>
+                    <view bindtap="bindtapSort">价格<icon class="default {{sort}}"></icon></view>
+                    <view bindtap="bindtapFormat"><icon class="{{format?'proListIoc1':'proListIoc2'}}"></icon></view>
+                </view>
+                <shop-list format="{{format}}" list="{{commoditylist}}"/>
+                <!--分页-->
+                <paging bindnumChange="numChange" bindmyevent="onMyEvent" pages="{{pages}}" pageNum="{{pageNum}}" hotwordList="{{hotwordList}}" sign="true" />
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y scroll-top="{{top}}" style="height:{{windowHeight}}px" bindscroll="bindscrollRoll">
+                <shops-lists list="{{shopslist}}" />
+                <!--分页-->
+                <paging bindnumChange="numChange" bindmyevent="onMyEvent" pages="{{pages}}"  pageNum="{{pageNum1}}"  hotwordList="{{hotwordList}}"  sign="true" />
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y scroll-top="{{top}}" style="height:{{windowHeight}}px" bindscroll="bindscrollRoll">
+                <information-list list="{{informationlist}}"/>
+                <!--分页-->
+                <paging bindnumChange="numChange" bindmyevent="onMyEvent" pages="{{pages}}"  pageNum="{{pageNum2}}"  hotwordList="{{hotwordList}}"  sign="true"/>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    <register s-if="{{register != '003'}}"></register>
+</view>

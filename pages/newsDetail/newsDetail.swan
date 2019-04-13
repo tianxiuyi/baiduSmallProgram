@@ -1,0 +1,45 @@
+<import src="../../html2wxml-template/html2wxml.swan" />
+<view class="container">
+    <view class="newsDetailBox">
+        <view class="newsDetailTit">{{details.tittle}}</view>
+        <view class="newsTime"><text>{{details.headTitle}}</text>{{details.time}}</view>
+        <view class="newsDetailCon">
+            <template is="html2wxml" data="{{{wxmlData:busindetail}}}" />
+        </view>
+        <!-- <view class="newsDetailCon">
+            <view>油锯是以汽油机为动力的手提锯,主要用于伐木和造材，其工作原理是靠锯链上交错的L形刀片横向运动来进行剪切动作。下面本文就具体为大家介绍一下油锯的安全操作规程，教大家如何正确操作来延长油的使用寿命，希望对大家能够有所助，赶紧来看看吧！</view>
+            <view><image src="https://style.org.hc360.com/images/baidu/newsImg.png"></image></view>
+            <view>伐木油锯使用方法油锯安全操作规程<br />
+                1、油锯首次使用前必须详细阅读所有的操作说明，不遵守油锯安全规则会导致生命危险。<br />
+                2、未成年者不允许使用油锯
+            </view>
+        </view> -->
+        <view class="editor">责任编辑：{{details.author}}</view>
+        <view class="newsTags"><text s-for="item in details.keys">{{item}}</text></view>
+        <view class="statementBox">
+            免责声明: 凡注明来源本网的所有作品，均为本网合法拥有版权或有权使用的作品，欢迎转载，注明出处。非本网作品均来自互联网，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。
+            <text>来源：{{details.headTitle}}</text>
+        </view>
+    </view>
+    <view class="newsBox">
+        <view class="title">相关资讯</view>
+        <view class="newsCon">
+            <view class="{{item.imageSmall ==''?'newsList':'newsListImg'}}" s-for="item,index in relatedList" bindtap="bindtapInformation" data-infoId="{{item.infoId}}" data-webName="{{item.webName}}" data-bcid="{{item.bcId}}">
+                <view class="listCon">
+                    <view class="newsTit">{{item.title}}</view>
+                    <text class="newsBot" s-if="!item.pid">{{item.publicTime}}</text>
+                    <view class="newsBotPrice" s-else>
+                        <view class="nPrice" s-if="(item.price*1) !== 0 ">￥<text>{{item.price}}</text></view>
+                        <view class="nPrice" s-else><text>价格面议</text></view>
+                        <view class="xjBtn">询价</view>
+                    </view>
+                </view>
+                <view class="newsImg">
+                    <image s-if="!item.pid" src="https:{{item.imageSmall}}"></image>
+                    <image s-else src="{{item.imageSmall}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <register s-if="{{register != '003'}}"></register>
+</view>

@@ -1,0 +1,15 @@
+<!--分页-->
+<view class="pageBox">
+    <view class="{{pageNum != 1? 'pageBtn':'grayBtn'}}" bindtap="bindtapLower" data-pages="{{pages}}" data-text="1">首页</view>
+    <view class="{{pageNum != 1? 'pageBtn':'grayBtn'}}" bindtap="bindtapLower" data-pages="{{pages}}" data-text="2">上一页</view>
+    <view class="pageNum">{{pageNum}}/{{pages}}</view>　
+    <view class="{{pageNum != pages? 'pageBtn':'grayBtn'}}"" bindtap="bindtapLower" data-pages="{{pages}}" data-text="3">下一页</view>
+    <view class="{{pageNum != pages? 'pageBtn':'grayBtn'}}"" bindtap="bindtapLower" data-pages="{{pages}}" data-text="4">尾页</view>	
+</view>
+<!--您还可以查看-->
+<view class="searchOther" s-if="sign === 'true'">
+    <view class="title">你还可以查找</view>
+    <view class="otherCon">
+        <view bindtap="bindtapLookup" s-for="item in hotwordList" data-text="{{item.keyword}}">{{item.keyword}}</view>
+    </view>
+</view>

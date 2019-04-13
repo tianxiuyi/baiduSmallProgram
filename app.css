@@ -1,0 +1,87 @@
+.container{padding-bottom:30rpx;}
+*{font-family:"Microsoft YaHei";}
+page{background:#f5f5f5;}
+.searchBox{padding:30rpx; background: #fff; margin-bottom:20rpx;}
+.searchCon{ background:#f7f7f7; text-align: center; border-radius:100rpx; height:60rpx; line-height: 60rpx;}
+.searchCon icon{ display: inline-block;height:30rpx;width:30rpx;vertical-align: middle; margin-right:5rpx; background:url(https://style.org.hc360.com/images/baidu/icon.png) 0 0; background-size:100rpx 500rpx;}
+.searchCon text{ font-size:27rpx;color:#666; display: inline-block;vertical-align: middle; line-height:50rpx;}
+
+.title{ font-size: 32rpx; color: #000; line-height: 98rpx; padding:0 30rpx;font-weight: bold;}
+.searchBox2{padding:30rpx; overflow: hidden;}
+.searchCon{height:60rpx;line-height: 60rpx; position: relative;}
+.searchLeft{float: left;height:60rpx;width:570rpx; background: #fff; border-radius: 100rpx; position: relative;}
+.searchLeft icon.serachIco{height:30rpx;width:30rpx;margin-right:5rpx; background:url(https://style.org.hc360.com/images/baidu/icon.png) 0 0; background-size:100rpx 500rpx; position: absolute;top:15rpx;left:15rpx;}
+.searchCon button{float: right; padding:0 20rpx;height:60rpx; line-height: 60rpx; text-align: center; border-radius: 100rpx; font-size: 28rpx; color: #fff; background: #fd5555; }
+.searchLeft input{padding-left: 60rpx;height:60rpx;width:100%; box-sizing:border-box; font-size: 26rpx; color: #333; line-height:60rpx;}
+.searchLeft icon.closeIco{height:60rpx;width:60rpx;margin-right:5rpx; background:url(https://style.org.hc360.com/images/baidu/icon.png) 20rpx -308rpx; background-size:100rpx 500rpx; position: absolute;top:0;right:15rpx;}
+
+.searchOther{background: #fff; margin-top:20rpx; overflow: hidden;}
+.otherCon{padding:10rpx 20rpx 20rpx; border-top: 1rpx solid #eee; overflow: hidden;}
+.otherCon view{width:23%; float: left; margin: 10rpx 1%; padding:0 15rpx; box-sizing:border-box;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; background: #f5f5f5; border-radius: 30rpx; font-size: 24rpx; height:60rpx; line-height: 60rpx; text-align: center;}
+.tabTit{width:100%;height:50rpx; line-height: 50rpx; padding: 8rpx 0 30rpx; border-bottom: 1rpx solid #eee;}
+.tabTit view{width: 33.333%; float: left; text-align: center; font-size: 32rpx; font-weight: bold;}
+.tabTit view.tabCur{color:#fd5555;}
+.tabCur::after{content: ""; display: block;width:60rpx;height:5rpx; background: #fd5555; margin:5rpx auto 0;}
+
+.newsBox{ overflow: hidden; background: #fff; margin-bottom: 20rpx;}
+.newsList,.newsListImg{padding:20rpx 30rpx; border-top: 1rpx solid #eee;box-sizing:border-box; float: left;width:100%;}
+.newsList .newsTit{font-size: 30rpx; color: #000; font-weight: bold;clear:both;margin-bottom: 15rpx;padding-top:6rpx;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.newsList .newsBot{text-overflow: -o-ellipsis-lastline;padding-bottom:6rpx; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 26rpx; color: #666; line-height: 36rpx;}
+.newsImg{ float: right;width:180rpx;height:140rpx; border: 1rpx solid #eee; border-radius:10rpx; overflow:hidden;}
+.newsImg image{max-width:180rpx; max-height:140rpx;}
+.newsListImg .listCon{float: left;width: calc(100% - 210rpx);}
+.newsListImg .newsBot{clear:both;margin-bottom: 15rpx; overflow:hidden;padding-top:12rpx; text-overflow:ellipsis; white-space:nowrap;font-size: 26rpx; color: #666; line-height: 36rpx; display: block;}
+.newsListImg .newsTit{text-overflow: -o-ellipsis-lastline;margin-bottom:12rpx; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 30rpx; color: #000; font-weight: bold;}
+.newsCon{overflow: hidden;}
+
+.pageBtn,.grayBtn{display:inline-block; font-size:28rpx; color: #333; text-align: center; vertical-align: middle; background: #f5f5f5; border-radius: 8rpx;height:60rpx; line-height: 60rpx; padding: 0 15rpx; margin:0 10rpx;}
+.grayBtn{color:#999;}
+.pageNum{ line-height: 60rpx; display: inline-block; color: #333; font-size: 28rpx; padding: 0 10rpx;}
+.pageBox{ text-align: center; padding: 20rpx 0;border-top:1rpx solid #eee; background: #fff;}
+
+.shopsTop{padding:20rpx 30rpx; background: #fd5555; position: relative; overflow: hidden;}
+.shopsLogo{float: left;width:100rpx;height:100rpx; border-radius: 10rpx; overflow: hidden;}
+.shopsLogo image{height: 100rpx;width:100rpx;}
+.shopsInfo{float: left; position: absolute;left:140rpx;top:30rpx;right:0;}
+.shopsInfoTop{ position: relative; overflow: hidden;height:34rpx;}
+.shopsName{float: left;height:30rpx; line-height:30rpx; color: #fff; font-size: 30rpx; font-weight: bold;max-width:56%;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.strengthIco{float: left; background: #fff; color: #c52922; line-height:32rpx; font-size: 24rpx; padding:0 10rpx; margin-left: 10rpx;}
+.strengthIco icon{width:30rpx;height:32rpx; background: url(https://style.org.hc360.com/images/baidu/detailIco.png) 0 0rpx; background-size:200rpx 200rpx; display: inline-block; vertical-align:middle}
+.collectBtn{ position: absolute;right:-1rpx;top:0;border: 1rpx solid #fff; border-radius: 50rpx 0 0 50rpx;height:30rpx;font-size:24rpx;color:#fff; padding:0 15rpx; line-height: 30rpx;}
+.shopsInfoBot{ overflow: hidden;}
+.shopsInfoBot view{float: left; margin-right: 20rpx; font-size: 24rpx;color:#fff; margin-top:12rpx;}
+.shopsInfoBot view icon{ display: inline-block;width:30rpx;height:30rpx; vertical-align: middle; margin-right:2rpx;background: url(https://style.org.hc360.com/images/baidu/detailIco.png) 0 0rpx; background-size:200rpx 200rpx;}
+.shopsInfoBot .mmtIco icon{background-position:-36rpx 0;width:34rpx;}
+.shopsInfoBot .xcxtIco icon{background-position:-78rpx 0;}
+.shopsInfoBot .sdrzIco icon{background-position:-116rpx 0;}
+.authenInfo{ text-align: center; color: #fff; font-size: 26rpx;height:80rpx; line-height: 80rpx; background: #d5494a;}
+.shopsTit{background: #fff;height:100rpx; font-size: 32rpx; text-align: center; overflow: hidden;}
+.shopsTit view{text-align: center; float: left;width:50%;height:100rpx;line-height:100rpx;}
+.shopsTit view.cur{ color:#fd5555; position: relative;}
+.shopsTit view.cur::after{content:"";height:5rpx;width:130rpx; background: #fd5555; position: absolute;left:50%; margin-left: -65rpx;bottom:0;}
+.shopsCon{ overflow: hidden; padding-bottom: 120rpx;}
+.shopsBot{ position: fixed;bottom:0;left:0;right:0;height:98rpx; background: #fff; line-height: 98rpx; text-align: center;}
+.shopsBots{ position: fixed;bottom:0;left:0;right:0;height:148rpx; background: #fff; line-height: 98rpx; text-align: center;}
+.PurchaseBtn{width:23%; float: left; font-size: 24rpx;line-height:36rpx;padding-top:12rpx;}
+.contactBtn{width:calc(23% - 1rpx); float: left;font-size: 24rpx;border-left: 1rpx solid #e5e5e5;margin-left:-1rpx;line-height:36rpx;padding-top:12rpx;}
+.messBtn{ float: left;width:53.9%;color:#fff; font-size:32rpx; background: #fd5555; text-align: center; }
+.PurchaseBtn::before,.contactBtn::before{content:"";width:42rpx;height:42rpx; margin: 0 auto 0; display: block;background:url(https://style.org.hc360.com/images/baidu/detailIco.png) no-repeat; background-size:200rpx 200rpx;}
+.PurchaseBtn::before{background-position:3rpx -47rpx;}
+.contactBtn::before{background-position:-52rpx -48rpx;}
+
+.messAlert{ background:rgba(0, 0, 0, 0.6); position: fixed;top:0;left:0;right:0;bottom: 0;}
+.messAlertCon{position:absolute;bottom:0;left:0;right:0;background: #f5f5f5;padding:60rpx 30rpx 40rpx;}
+.messCon{padding:20rpx 0;height:80rpx;}
+.relCon{padding:20rpx 0;height:80rpx;}
+.messCon text,.telCon text{display: block; float: left;width:120rpx;line-height:80rpx;}
+.messCon input{float: left; height:80rpx;width:calc( 100% - 160rpx );background: #fff; border-radius: 10rpx;border: 1rpx soolid #ff0000; font-size: 28rpx;padding-left:20rpx;}
+.telCon input{float: left; height:80rpx;width:calc( 100% - 340rpx );background: #fff; border-radius: 10rpx;border: 1rpx soolid #ff0000;font-size: 28rpx;padding-left:20rpx;}
+.telCon button{float: left;background: #fd5555;color:#fff;width:160rpx; font-size:28rpx;height:80rpx; border-radius: 10rpx; line-height: 80rpx; margin-left: 20rpx;}
+.messClose{ position: absolute;right:10rpx;top:10rpx; width:42rpx;height:42rpx;background:url(https://style.org.hc360.com/images/baidu/detailIco.png) -110rpx -48rpx no-repeat; background-size:200rpx 200rpx;}
+
+.xjAlert{ background:rgba(0, 0, 0, 0.6); position: fixed;top:0;left:0;right:0;bottom: 0;}
+.xjAlertCon{position:absolute;bottom:0;left:0;right:0;background: #f5f5f5;}
+.xjCon{padding:20rpx 30rpx;height:80rpx;}
+.xjAlertTit{ font-size: 36rpx; color: #333; font-weight: bold; text-align: center; border-bottom:1rpx solid #e5e5e5;height:90rpx; line-height: 90rpx;}
+.xjClose{ position: absolute;right:20rpx;top:24rpx; width:42rpx;height:42rpx;background:url(https://style.org.hc360.com/images/baidu/detailIco.png) -110rpx -48rpx no-repeat; background-size:200rpx 200rpx;}
+.searchBox2 input{text-align:left;}

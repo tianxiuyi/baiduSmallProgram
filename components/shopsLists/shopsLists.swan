@@ -1,0 +1,14 @@
+<view class="shopsBox">
+    <view class="shopsList" s-for="item in list">
+        <view bindtap="bindtapShop" data-pid="{{item.pid}}">
+            <view class="shopsName2"><text>{{item.company}}</text><icon class="mmtIco"></icon></view>
+            <view class="shopsInfo2">地址：{{item.zone}}</view>
+            <view class="shopsInfo2">经营模式：{{item.bm}}</view>
+            <view class="shopsInfo2" s-if="item.tp">主营产品：{{item.tp}}</view>
+        </view>
+        <view class="shopsBot2">
+            <view class="shopsBtn" bindtap="bindtapShop" data-pid="{{item.pid}}">进去店铺</view>
+            <view bindtap="bindtapContact" data-mp="{{item.mp}}">电话咨询</view>
+        </view>
+    </view>
+</view>

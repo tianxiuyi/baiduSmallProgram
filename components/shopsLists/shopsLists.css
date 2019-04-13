@@ -1,0 +1,13 @@
+.shopsBox{padding:0; background: #fff; overflow: hidden;}
+.shopsList{padding:20rpx 30rpx; border-top: 1rpx solid #eee;}
+.shopsName2{ font-size: 30rpx; line-height: 40rpx; color: #333; font-weight: bold; padding: 5rpx 0 10rpx;}
+.shopsInfo2{font-size: 26rpx; line-height: 45rpx; color: #666;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.shopsInfo2 text{margin:0 5rpx;}
+.shopsBot2{ padding:25rpx 0 10rpx; overflow: hidden;}
+.shopsBot2 view{height:60rpx; margin-right:20rpx; float: left; border: 1rpx solid #e5e5e5; color: #333; line-height: 60rpx; font-size: 26rpx; padding: 0 20rpx; border-radius: 10rpx;}
+.shopsBot2 view.shopsBtn{ color:#fd5555; border: 1rpx solid #fd5555;}
+.shopsList:nth-child(1){border-top:0;}
+.shopsName text{display: inline-block; vertical-align: middle;max-width:85%;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; margin-right:10rpx;}
+.shopsName icon.mmtIco{background:url(https://style.org.hc360.com/images/baidu/icon2.png) 0 -382rpx no-repeat; background-size:100rpx 500rpx;width:32rpx;height:28rpx; vertical-align:middle; display: inline-block;}
+.shopsName icon.mmtVip{background:url(https://style.org.hc360.com/images/baidu/icon2.png) 0 -440rpx no-repeat; background-size:100rpx 500rpx;width:32rpx;height:32rpx;vertical-align:middle; display: inline-block;}
+ 

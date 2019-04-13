@@ -1,0 +1,163 @@
+<view class="container">
+    <view class="view">
+        <view class="shopsTop" s-if="markShow" style="padding:{{authentication != true?'20rpx 30rpx':'0'}};">
+            <view s-if="authentication != true">
+                <view class="shopsLogo"><image src="https://style.org.hc360.com/images/admission_xcx/hcLogo.png"></image></view>
+                <view class="shopsInfo">
+                    <view class="shopsInfoTop">
+                        <view class="shopsNames">{{shops.companyName}}</view>
+                        <view class="strengthIco" s-if="shops.isStrength"><icon></icon>实力商家</view>
+                    </view>
+                    <view class="shopsInfoBot">
+                        <view class="mmtIco" s-if="shops.mmtAges !== '0'"><icon></icon>买卖通 第{{shops.mmtAges}}年</view>
+                        <view class="xcxtIco" s-if="shops.isApp !== '1'"><icon></icon>小程序店铺</view>
+                        <view class="sdrzIco" s-if="shops.isField"><icon></icon>实地认证</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="shopsTit">
+            <view class="{{currentTab == 0 && 'cur'}}" bindtap="bindtapTap" data-index="0" s-if="authentication != true">全部商品</view>
+            <view class="curs1" s-else style="width:100%">为您推荐</view>
+            <view class="{{currentTab == 1 && 'cur'}}" bindtap="bindtapTap" data-index="1" s-if="authentication != true">店铺信息</view>
+        </view>
+    </view>
+    <view class="shopsCon">
+        <swiper style="height:{{windowHeight}}px" duration="500" current="{{currentTab}}" bindchange="changeContent">
+            <swiper-item>
+            <scroll-view scroll-y scroll-top="{{top}}" style="height:{{windowHeight}}px" class="content-item" bindscroll="bindscrollRoll">
+                <view class="proListCon2" style="text-align:center;" s-if="commodityList.length === 0">暂无商品</view>
+                <view class="proListCon2">
+                    <view class="proList2" s-for="item in commodityList" bindtap="bindtapBtn" data-bcid="{{item.bc_id}}">
+                        <view class="proImg2"><image src="https:{{item.image?item.image:'//style.org.hc360.com/images/M-hc/pro/nopic.jpg'}}"></image></view>
+                        <view class="proRig2">
+                            <view class="proName2">{{item.tittle}}</view>
+                            <view class="proPrice2" s-if="authentication != true">
+                                <view class="priceLeft" s-if="(item.price*1) !== 0">￥<text>{{item.price}}</text></view>
+                                <view class="priceLeft" s-else><text>价格面议</text></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!--分页-->
+                <paging s-if="commodityList.length !== 0" bindnumChange="numChange" pages="{{pages}}" pageNum="{{pageNum}}" sign="false" />
+                <view s-if="commodity" style="height: 50rpx"></view>
+            </scroll-view>
+            </swiper-item>
+            <swiper-item s-if="authentication != true">
+            <scroll-view scroll-y class="content-item" style="height:{{windowHeight}}px" bindscroll="bindscrollRoll">
+                <view class="infoBox">
+                    <view class="infotopList">
+                        <view class="title">基本信息</view>
+                        <view class="infoListCon">
+                            <view class="infolist">
+                                <text>主营行业：</text>
+                                <view>{{shops.areaName}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>经营模式：</text>
+                                <view>{{shops.kind}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>供应信息：</text>
+                                <view>{{shops.supplyBusinCount}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>经营地址：</text>
+                                <view>{{shops.address}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>成立时间：</text>
+                                <view>{{shops.createDate}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>注册资本：</text>
+                                <view>{{shops.capitalsum}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>法定代表：</text>
+                                <view>{{shops.corowner}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>联系人：</text>
+                                <view>{{shops.contactor}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>主营产品：</text>
+                                <view>{{shops.mainproStr}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>手机：</text>
+                                <view>{{shops.mp}}</view>
+                            </view>
+                            <view class="conpanyInfo">
+                                <text>公司介绍：</text>
+                                <view>{{shops.introduce}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="infotopList">
+                        <view class="title">企业身份认证<text class="rzInfo">认证信息</text></view>
+                        <view class="infoListCon">
+                            <view class="infolist">
+                                <text>公司名称：</text>
+                                <view>{{shops.companyName}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>注册号：</text>
+                                <view>{{shops.regcode}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>注册资本：</text>
+                                <view>{{shops.currencyTypeName}}{{shops.capitalsum}}万元</view>
+                            </view>
+                            <view class="infolist">
+                                <text>法定代表：</text>
+                                <view>{{shops.corowner}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>企业类型：</text>
+                                <view>{{shops.type}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>营业期限：</text>
+                                <view s-if="shops.bizstartdate">{{shops.bizstartdate}} 至 {{shops.bizenddate}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>经营模式：</text>
+                                <view>{{shops.kind}}</view>
+                            </view>
+                            <view class="infolist">
+                                <text>联系人：</text>
+                                <view>{{shops.contactor}}</view>
+                            </view>
+                        </view>
+                    </view>            
+                    <view class="infotopList">
+                        <view class="title">企业身份认证<text class="rzInfo">认证信息</text></view>
+                        <view class="infoListCon">
+                            <view class="mmtImg"><image src="https:{{shops.picurl}}"></image></view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!--底部浮动-->
+    <view class="{{iPhoneX?'shopsBots':'shopsBot'}}">
+        <view class="PurchaseBtn" bindtap="bindtapPurchase">发布采购</view>
+        <view class="contactBtn" bindtap="bindtapContact" s-if="authentication != true">立即联系</view>
+        <view class="messBtn"  bindtap="bindtapLeavingAmessage" s-if="authentication != true">发送留言</view>
+        <view class="messBtn"  bindtap="bindtapLeavingAmessage" s-else style="width:77%">发送留言</view>
+    </view>
+    <!--留言弹层-->
+    <view class="messAlert" s-if="animation">
+        <view class="messAlertCon {{animation?'slideup':''}}">
+            <view class="messClose" bindtap="bindtapCancel"></view>
+            <view class="messCon"><text>留言：</text><input type="text" maxlength="140" bindinput="bindinputStayWord"/></view>
+            <view class="telCon"><text>电话：</text><input type="number" maxlength="11" bindinput="bindinputTelephone" /><button type="button" bindtap="bindtapSend">发送</button></view>
+        </view>
+    </view>
+    <register s-if="{{register != '003'}}"></register>
+</view>

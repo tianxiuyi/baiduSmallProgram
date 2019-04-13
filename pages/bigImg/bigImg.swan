@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="bigImgBox">
+        <swiper class="bigImgBox" bindchange="bindchangePicture">
+            <view class="bigImgCon" s-for="item in picUrls"><image src="https:/{{item}}"></image></view>
+        </swiper>
+        <view class="bitImgInfo"><view class="bigImgName">{{title}}</view><view class="bigImgNum">{{current}}/{{picUrls.length}}</view></view>
+    </view>
+    <view class="bigImgBtn" s-if="authentication != 'true'">
+        <button type="button" bindtap="bindtapContact">联系方式</button>
+        <button type="button" bindtap="bindtapReturn">返回商机</button>
+    </view>
+    <view class="bigImgPrompt" s-if="authentication != 'true'">请注意：本图片来自{{companyName}}提供的{{title}}产品，图片仅供参考，供应{{title}}产品会因为批次的不同可能与本图片不一致，请以收到的实物为准。</view>
+    <register s-if="{{register != '003'}}"></register>
+</view>

@@ -1,0 +1,10 @@
+.bigImgBox{height:750rpx;position: relative;}
+.bigImgBox image{width: 750rpx;height:750rpx;}
+.bigImgCon{width:750rpx;height:750rpx;}
+.bitImgInfo{position: absolute;bottom:0;left:0;right:0;height:85rpx; background: #313131; line-height: 85rpx;}
+.bitImgInfo .bigImgName{width:85%; float: left; color:#fff; font-size: 28rpx; padding-left: 10px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap}
+.bigImgNum{ float: right; padding-right:25rpx;font-size:34rpx; line-height: 85rpx;color:#fff;}
+.bigImgPrompt{ padding:30rpx;color:#999; line-height: 42rpx; font-size: 26rpx;}
+.bigImgBtn{ overflow: hidden;padding:30rpx 0 25rpx; background: #fff; text-align: center;}
+.bigImgBtn button{display:inline-block; line-height: 80rpx; border: 1rpx solid #fd5555; color:#fd5555; font-size:32rpx;height:80rpx;width:300rpx; border-radius: 60rpx; margin:0 20rpx;}
+.bigImgBtn button:nth-child(1){background: #fd5555;color:#fff;}

@@ -1,0 +1,58 @@
+<view class="container">
+    <view class="searchBox">
+        <view class="searchCon">
+            <navigator url="/pages/search/search"><icon></icon><text>搜索更多商品信息</text></navigator>
+        </view>
+    </view>
+    <view class="purchaseTop">
+        <view class="purchaseTopCon">
+            <icon class="pIco1"></icon>
+            <text class="pTit">一小时</text>
+            <text class="pIntro">快速响应</text>
+        </view>
+        <view class="purchaseTopCon">
+            <icon class="pIco2"></icon>
+            <text class="pTit">享受</text>
+            <text class="pIntro">免费找货</text>
+        </view>
+        <view class="purchaseTopCon">
+            <icon class="pIco3"></icon>
+            <text class="pTit">获得</text>
+            <text class="pIntro">优质商品</text>
+        </view>
+        <view class="purchaseTopCon">
+            <icon class="pIco4"></icon>
+            <text class="pTit">收货</text>
+            <text class="pIntro">满意采购</text>
+        </view>
+    </view>
+    <view class="purchaseList">
+        <view class="pPro">
+            <view class="pLeft"><text>*</text>我要采购</view>
+            <view class="pRig"><input type="text" placeholder="请输入采购产品名称" bindinput="bindinputName" maxlength="40"/></view>
+        </view>
+        <view class="pPro">
+            <view class="pLeft">采购数量</view>
+            <view class="pNum"><view class="addIco" s-if="Show" bindtap="bindtapReduce"></view><input type="number" placeholder="请输入数量" value="{{numberval}}"  bindinput="bindinputNumber" bindfocus="bindfocusHide" bindblur="bindblurShow" /><view class="reduceIco" s-if="Show" bindtap="bindtapPlus"></view></view>
+        </view>
+        <view class="pPro">
+            <view class="pLeft"><text>*</text>联系电话</view>
+            <view class="pRig"><input type="number" placeholder="请输入您的手机号" bindinput="bindinputThin" maxlength="11"/></view>
+        </view>
+        <view class="pPro">
+            <view class="pLeft">采购日期</view>
+            <view class="pRig">
+                <picker mode="selector" value="{{index}}" range="{{array}}" bind:change="selectorChange" title="普通选择器">
+                    <view class="picker">
+                        {{array[index]}}<text class="triangle"></text>
+                    </view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="pPrompt">请输入采购商品名称</view> -->
+    <view class="purchaseBtns">
+        <button type="button" bindtap="bindtapPurchase">确认提交</button>
+    </view>
+    <register s-if="{{register != '003'}}"></register>
+</view>

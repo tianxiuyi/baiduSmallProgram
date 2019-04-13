@@ -1,0 +1,33 @@
+<view class="proListBox">
+    <!--小图-->
+    <view class="proListCon" s-if="format === true">
+        <view class="proList" bindtap="bindtapCommodity" data-bcid="{{item.bcid}}" s-for="item in list">
+            <view class="proImg"><image src="{{item.imageBig}}"></image></view>
+            <view class="proRig">
+                <view class="proName">{{item.title}}</view>
+                <view class="companyName">{{item.company}}</view>
+                <view class="proPrice">
+                    <view class="priceLeft" s-if="(item.price*1) === 0"><text>价格面议</text></view>
+                    <view class="priceLeft" s-else>￥<text>{{item.price}}</text></view>
+                    <view class="xjBtn">询价</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--大图-->
+    <view class="proListCon2" s-if="format === false">
+        <view class="proList2" bindtap="bindtapCommodity" data-bcid="{{item.bcid}}"  s-for="item in list">
+            <view class="proImg2"><image src="{{item.imageBig}}"></image></view>
+            <view class="proRig2">
+                <view class="proName2">{{item.title}}</view>
+                <view class="mmtIco"><icon></icon></view>
+                <view class="companyName2">{{item.company}}</view>
+                <view class="proPrice2">
+                    <view class="priceLeft" s-if="(item.price*1) === 0"><text>价格面议</text></view>
+                    <view class="priceLeft" s-else>￥<text>{{item.price}}</text></view>
+                    <view class="xjBtn">询价</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

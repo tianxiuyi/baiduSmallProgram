@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/search/search",
+        "pages/proSearch/proSearch",
+        "pages/newsDetail/newsDetail",
+        "pages/detail/detail",
+        "pages/shops/shops",
+        "pages/bigImg/bigImg",
+        "pages/purchase/purchase",
+        "pages/reg/reg"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fd5555",
+        "navigationBarTitleText": "慧聪HC360",
+        "navigationBarTextStyle": "white"
+    }
+}

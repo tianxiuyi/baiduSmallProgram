@@ -1,0 +1,9 @@
+.prpSearchTit{height:75rpx; text-align: center; background: #fff;}
+.prpSearchTit view{width:33.333%; float: left; font-size: 28rpx; font-weight: bold;color:#666; line-height: 75rpx;}
+.prpSearchTit view.cur{ color: #fd5555;}
+.prpSearchTit view icon.default{width:12rpx;height:20rpx;margin-left:5rpx;background:url(https://style.org.hc360.com/images/baidu/icon2.png) -85rpx 0 no-repeat; background-size:100rpx 500rpx;}
+.prpSearchTit view icon.up{width:12rpx;height:20rpx;margin-left:5rpx;background:url(https://style.org.hc360.com/images/baidu/icon2.png) -41rpx 0 no-repeat; background-size:100rpx 500rpx;}
+.prpSearchTit view icon.down{width:12rpx;height:20rpx;margin-left:5rpx;background:url(https://style.org.hc360.com/images/baidu/icon2.png) -63rpx 0 no-repeat; background-size:100rpx 500rpx;}
+.prpSearchTit view icon.proListIoc1,.prpSearchTit view icon.proListIoc2{width:35rpx;height:35rpx; vertical-align:middle; margin:0 10rpx;}
+.prpSearchTit view icon.proListIoc1{background:url(https://style.org.hc360.com/images/baidu/icon2.png) -0rpx -180rpx no-repeat; background-size:100rpx 500rpx;}
+.prpSearchTit view icon.proListIoc2{background:url(https://style.org.hc360.com/images/baidu/icon2.png) -0rpx -248rpx no-repeat; background-size:100rpx 500rpx;}

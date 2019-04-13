@@ -1,0 +1,35 @@
+.purchaseTop{ background:#fff;padding:20rpx 30rpx;overflow: hidden;}
+.purchaseTopCon{width:25%;float:left; text-align: center; }
+.purchaseTopCon icon{width:100rpx;height:100rpx;margin-bottom:10rpx;background:url(https://style.org.hc360.com/images/baidu/purchaseIco.png) no-repeat; background-size:550rpx 100rpx;}
+.purchaseTopCon text{display:block;}
+.pTit{ font-size: 34rpx; color:#333; font-weight: bold;}
+.pInfo{ font-size: 24rpx; color:#666;}
+.purchaseTopCon icon.pIco1{background-position:0 0;}
+.purchaseTopCon icon.pIco2{background-position:-110rpx 0;}
+.purchaseTopCon icon.pIco3{background-position:-220rpx 0;}
+.purchaseTopCon icon.pIco4{background-position:-330rpx 0;}
+
+.purchaseList{ background: #fff; margin-top: 20rpx; padding-left:30rpx;}
+.pPro{height:100rpx;border-bottom: 1rpx solid #f0f0f0; line-height: 100rpx;}
+.pLeft{float: left; padding-left: 20rpx; white-space:nowrap; font-size:32rpx; color:#333;width:160rpx;}
+.pLeft text{margin-left: -20rpx; color: #fd5555;}
+.pRig,.pNum{float: left;width:calc(100% - 100px); position: relative;}
+.pRig input,.pNum input{height:100rpx;width:80%;margin: 0 auto}
+.pRig select{width:90%;height:80rpx;border:1px solid #ddd;}
+.pNum input{text-align: center;}
+.addIco{position: absolute;top:25rpx;left:0;width:50rpx;height:50rpx;background:url(https://style.org.hc360.com/images/baidu/purchaseIco.png) -440rpx 0 no-repeat; background-size:550rpx 100rpx;}
+.reduceIco{position: absolute;top:25rpx;right:0rpx;width:50rpx;height:50rpx;background:url(https://style.org.hc360.com/images/baidu/purchaseIco.png) -500rpx 0 no-repeat; background-size:550rpx 100rpx;}
+.purchaseBtns{position: fixed;bottom:0; background: #f5f5f5; padding:30rpx;right:0;left:0;}
+.purchaseBtns button{color:#fff; font-size: 34rpx;background: #fd5555; border: 0; border-radius:10rpx; box-shadow: 0 0 6rpx 3rpx #ddd;}
+.pPrompt{position: fixed;left:50%; margin-left: -180rpx;height:80rpx; line-height:80rpx;width:360rpx; background: rgba(0, 0, 0, 0.7); font-size: 28rpx;color:#fff; text-align: center;top:50%; margin-top: -40rpx; border-radius:10rpx;}
+
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10rpx solid transparent;
+    border-right: 10rpx solid transparent;
+    border-top: 15rpx solid #666;
+    right: 0;
+    top: 40rpx;
+}

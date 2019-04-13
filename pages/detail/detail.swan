@@ -1,0 +1,86 @@
+<import src="../../html2wxml-template/html2wxml.swan" />
+<view class="container">
+    <view class="detailTop">
+        <view class="detailImgBox">
+            <swiper class="detailImgBox" indicator-dots="false" autoplay="false" interval="3000" bindchange="bindchangePicture">
+                <view class="detailImgCon" s-for="item in busininfo.picUrls" bindtap="bindtapPicture" data-picUrls="{{busininfo.picUrls}}" data-title="{{busininfo.tittle}}" data-companyName="{{busininfo.companyName}}"><image src="https:{{item.bigPicUrl}}"></image></view>
+            </swiper>
+            <view class="detailImgNum">{{current}}/{{busininfo.picUrls.length}}}</view>
+        </view>
+        <view s-if="authentication != true">
+            <view class="proDetailName">{{busininfo.tittle}}</view>
+            <view class="detailPrice" s-if="(busininfo.price*1) !== 0">￥<text>{{busininfo.price}}</text></view>
+            <view class="detailPrice" s-else><text>价格面议</text></view>
+            <view class="detailInfo">
+                <text>供货总量：{{busininfo.num}}</text>
+                <text>发货期限：{{busininfo.timeLimit}}</text>
+                <text>运费：卖家承担运费</text>
+                <text>地区：{{busininfo.provinceName}} {{busininfo.cityName}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="comInfo" s-if="authentication != true">
+        <view class="comInfoName">{{busininfo.companyName}} </view>
+        <text>认证类型：{{busininfo.certificateType}}</text>
+        <navigator url="/pages/shops/shops?pid={{busininfo.pid}}"><view class="shopsBtn">进入商铺</view></navigator>
+    </view>
+    <view class="proIntroBox">
+        <view class="title" s-if="authentication != true">商品信息</view>
+        <view class="title" s-else>产品信息</view>
+        <view class="proIntroCon">
+            <view class="detailTable">
+                <view class="tableList" s-for="item in busininfo.businAttList">
+                    <text>{{item.attname}}：</text>
+                    <view>{{item.attvalue}}</view>
+                </view>
+            </view>
+            <view class="detailImg">
+                <template is="html2wxml" data="{{{wxmlData:busindetail}}}" />
+            </view>            
+        </view>
+    </view>
+    <!--底部浮动-->
+    <view class="{{iPhoneX?'shopsBots':'shopsBot'}}">
+        <view class="PurchaseBtn" bindtap="bindtapPurchase">发布采购</view>
+        <view class="contactBtn" bindtap="bindtapContact" s-if="authentication != true">立即联系</view>
+        <view class="messBtn"  bindtap="bindtapInquiry" s-if="authentication != true">立即询价</view>
+        <view class="messBtn" style="width:77%;"  bindtap="bindtapInquiry" s-else>立即咨询</view>
+    </view>
+    <!--询价弹层-->
+    <view class="xjAlert"  s-if="animation">
+        <view class="xjAlertCon {{animation?'slideup':''}}">
+            <view class="xjAlertTit" s-if="authentication != true">立即询价</view>
+            <view class="xjAlertTit" s-else>立即咨询</view>
+            <view class="xjClose" bindtap="bindtapCancel"></view>
+            <view class="xjAlertList">
+                <view class="pPro"><view  class="pLeft" s-if="authentication != true">询价产品</view><view s-else  class="pLeft">咨询产品</view><view class="pRig messCons">{{busininfo.tittle}}</view></view>
+                <view class="pPro">
+                    <view class="pLeft">采购数量</view>
+                    <view class="pNum"><view class="addIco" bindtap="bindtapReduce"></view><input type="number" placeholder="请输入数量" value="{{numberval}}"  bindinput="bindinputNumber"/><view class="reduceIco" bindtap="bindtapPlus"></view></view>
+                </view>
+                <view class="pPro">
+                    <view class="pLeft">采购日期</view>
+                    <picker mode="selector" value="{{index}}" range="{{array}}" bind:change="selectorChange" title="普通选择器">
+                        <view class="pRig">
+                            {{array[index]}} <text class="triangle"></text>
+                        </view>
+                    </picker>
+                </view>
+                <view class="pPro">
+                    <view class="pLeft"><text>*</text>联系电话</view>
+                    <view class="pRig"><input type="number" placeholder="请输入您的手机号" maxlength="11"  bindinput="bindinputThin" /></view>
+                </view>
+            </view>
+            <button type="button" class="{{iPhoneX?'xjAlertBtns':'xjAlertBtn'}}" bindtap="bindtapSubmission">提交</button>
+        </view>
+    </view>
+    <!--留言弹层-->
+    <view class="messAlert"  style="display:none;">
+        <view class="messAlertCon">
+            <view class="messClose"></view>
+            <view class="messCon"><text>留言：</text><input type="text" /></view>
+            <view class="telCon"><text>电话：</text><input type="text" /><button type="button">发送</button></view>
+        </view>
+    </view>
+    <register s-if="{{register != '003'}}"></register>
+</view>

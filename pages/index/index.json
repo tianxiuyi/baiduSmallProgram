@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "慧聪HC360",
+    "usingComponents": {
+        "register": "/components/register/register"
+    }
+}

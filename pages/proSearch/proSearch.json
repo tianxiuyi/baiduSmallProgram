@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "shop-list": "/components/shopList/shopList",
+        "information-list": "/components/informationList/informationList",
+        "shops-lists": "/components/shopsLists/shopsLists",
+        "paging": "/components/paging/paging",
+        "register": "/components/register/register"
+    }
+}

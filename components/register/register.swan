@@ -1,0 +1,2 @@
+<!--注册按钮浮动-->
+<view class="regRigBtn" bindtap="bindtapRegister">立即注册</view>

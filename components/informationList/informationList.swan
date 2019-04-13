@@ -1,0 +1,11 @@
+<view class="newsBox">
+    <view class="newsCon">
+        <view class="{{item.imageSmall == ''?'newsList':'newsListImg'}}" bindtap="bindtapInformation" data-infoId="{{item.infoId}}" data-webName="{{item.webName}}" s-for="item in list">
+            <view class="listCon">
+                <view class="newsTit">{{item.title}}</view>
+                <text class="newsBot">{{item.text}}</text>
+            </view>
+            <view class="newsImg" s-if="item.imageSmall"><image src="https:{{item.imageSmall}}"></image></view>
+        </view>
+    </view>
+</view>
